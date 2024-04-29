@@ -1,9 +1,7 @@
 <?php 
-
-    namespace DAL;
-
+    namespace DAL; 
+    
     use \PDO;
-
    class Conexao {
       private static $dbNome = 'laboratorio'; 
       private static $dbHost = 'localhost';

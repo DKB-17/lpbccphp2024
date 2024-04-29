@@ -9,9 +9,11 @@
   $registros = $con->query($sql);
   
   foreach ($registros as $linha){
-      $dpto = new \MODEL\Departamento(); 
+      $dpto = new \MODEL\Departamento();
+
       $dpto->setId($linha['id']); 
       $dpto->setDescricao($linha['descricao']);
+      
       $lstDpto[] = $dpto; 
   }
    
