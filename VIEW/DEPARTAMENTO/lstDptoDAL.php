@@ -1,5 +1,6 @@
 <?php
-include_once 'C:\xampp\htdocs\lpbccphp2024\DAL\Departamento.php';
+
+include_once 'C:\xampp\htdocs\phpcodes(29-04-24)\lpbccphp2024\DAL\Departamento.php';
 use DAL\Departamento;
 
 $dalDpto = new \DAL\Departamento();

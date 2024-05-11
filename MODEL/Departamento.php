@@ -1,8 +1,8 @@
 <?php 
   namespace MODEL; 
   class Departamento{
-       private ?int $id; 
-       private ?string $descricao; 
+       private int $id; 
+       private string $descricao; 
 
        public function __construct() { }
 

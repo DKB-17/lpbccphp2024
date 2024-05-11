@@ -1,0 +1,47 @@
+<?php
+
+    namespace MODEL;
+    class Equipamento{
+        private ?int $id; // ? nao permite nulo
+        private ?string $descricao;
+        private ?string $responsavel;
+        private ?int $departamento;
+        private ?string $compra;
+
+        public function __construct(){}
+
+        public function getId(){ 
+            return $this->id;
+        }   
+        public function setId(int $id){
+            $this->id  = $id;
+        }
+        public function getDescricao(){
+            return $this->descricao;
+        }
+        public function setDescricao(string $descricao){
+            $this->descricao  = $descricao;
+        }
+        public function getResponsavel(){
+            return $this->responsavel;
+        }
+        public function setResponsavel(string $responsavel){
+            $this->responsavel = $responsavel;
+        }
+        public function getDepartamento(){
+            return $this->departamento;
+        }
+        public function setDepartamento(string $departamento){
+            $this->departamento = $departamento;
+        }
+        public function getCompra(){
+            return $this->compra;
+        }
+        public function setCompra(string $compra){
+            $this->compra = $compra;
+        }
+
+
+    }
+
+ ?>
