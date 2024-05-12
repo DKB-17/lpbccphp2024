@@ -6,8 +6,7 @@ include_once 'C:\xampp\htdocs\lpbccphp2024\MODEL\Equipamento.php';
 
 class Equipamento
 {
-    public function Select()
-    {
+    public function Select(){
         $sql = "Select * from equipamento;";
         $con = Conexao::conectar();
         $registros = $con->query($sql);

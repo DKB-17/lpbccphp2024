@@ -1,10 +1,10 @@
 <?php
-include_once 'C:\xampp\htdocs\lpbccphp2024\DAL\Departamento.php';
-use DAL\Departamento;
+    include_once 'C:\xampp\htdocs\lpbccphp2024\DAL\TipoSoftware.php';
 
-$dalDpto = new \DAL\Departamento();
+    $dalTPSoft = new \DAL\TipoSoftware();
 
-$lstDpto = $dalDpto->Select();
+    $lstTipoSoftware = $dalTPSoft->Select();
+
 ?>
 
 <!DOCTYPE html>
@@ -19,21 +19,21 @@ $lstDpto = $dalDpto->Select();
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listar Departamento usando Model</title>
+    <title>Listar Tipo Software usando Model</title>
 </head>
 
 <body>
-    <h1>Listar Departamento</h1>
+    <h1>Listar Tipo Software</h1>
     <table class="highlight">
         <tr>
             <th>ID</th>
             <th>Descrição</th>
         </tr>
 
-        <?php foreach ($lstDpto as $dpto) { ?>
+        <?php foreach ($lstTipoSoftware as $tpsoft) { ?>
             <tr>
-                <td><?php echo $dpto->getId(); ?></td>
-                <td><?php echo $dpto->getDescricao(); ?></td>
+                <td><?php echo $tpsoft->getId(); ?></td>
+                <td><?php echo $tpsoft->getDescricao(); ?></td>
             </tr>
         <?php } ?>
 
