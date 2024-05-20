@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 12/05/2024 às 02:09
+-- Tempo de geração: 19/04/2024 às 01:51
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `laboratorio`
 --
+CREATE DATABASE IF NOT EXISTS `laboratorio` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `laboratorio`;
 
 -- --------------------------------------------------------
 
@@ -82,15 +84,6 @@ CREATE TABLE `software` (
   `qtdcopias` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
---
--- Despejando dados para a tabela `software`
---
-
-INSERT INTO `software` (`id`, `descricao`, `fabricante`, `tipo`, `valor`, `qtdcopias`) VALUES
-(1, 'Word', 'Microsoft', 12, 123.4, 3),
-(2, 'Chrome', 'Google', 13, 1000.3, 120),
-(11, 'Word', 'Microsoft', 12, 123, 3);
-
 -- --------------------------------------------------------
 
 --
@@ -101,14 +94,6 @@ CREATE TABLE `tiposoftware` (
   `id` int(11) NOT NULL,
   `descricao` varchar(35) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
-
---
--- Despejando dados para a tabela `tiposoftware`
---
-
-INSERT INTO `tiposoftware` (`id`, `descricao`) VALUES
-(12, 'editor'),
-(13, 'navegador');
 
 --
 -- Índices para tabelas despejadas
@@ -174,13 +159,13 @@ ALTER TABLE `inventario`
 -- AUTO_INCREMENT de tabela `software`
 --
 ALTER TABLE `software`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `tiposoftware`
 --
 ALTER TABLE `tiposoftware`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Restrições para tabelas despejadas

@@ -12,6 +12,13 @@ class Equipamento
         
         return $dalEqpto->Select();
     }
+    public function Insert(\model\Equipamento $equipamento){
+        $dalEqpto = new \DAL\Equipamento();
+
+        $result = $dalEqpto->Insert($equipamento);
+
+        return $result;
+    }
 
 }
 ?>
