@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    if (isset($_SESSION[""]) && $_SESSION[""]) {
+        
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,13 +31,13 @@
     <nav>
         <div class="nav-wrapper orange darken-3">
             <a href="#" class="brand-logo right">
-                <img src="/lpadst1php2024/view/images/logo.png" alt=""
+                <img src="/lpbccphp2024/view/images/logo.png" alt=""
                 width="130" height="65">
             </a>
             <ul id="nav-mobile" class="left hide-on-med-and-down">
-                <li><a href="/lpadst1php2024/view/departamento/lstDepartamento.php">Departamentos</a></li>
-                <li><a href="/lpadst1php2024/view/equipamento/lstEquipamento.php">Equipamentos</a></li>
-                <li><a href="collapsible.html">Logout</a></li>
+                <li><a href="/lpbccphp2024/view/departamento/lstDepartamento.php">Departamentos</a></li>
+                <li><a href="/lpbccphp2024/view/equipamento/lstEquipamento.php">Equipamentos</a></li>
+                <li><a href="../VIEW/logout.php">Logout</a></li>
             </ul>
         </div>
     </nav>
