@@ -15,14 +15,26 @@ $lstEqpto = $bllEqpt->Select();
 <html lang="pt-BR">
 
 <head>
-    <title>Listar Equipamentos</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Equipamentos usando DAL/Model</title>
 </head>
 
 <body>
     <?php include_once '../menu.php'; ?>
     <h1>Listar Equipamentos</h1>
-
-   <table class="highlight">
+    <button class="waves-effect waves-light btn blue" type="button" onclick="JavaScript:location.href='formEquipamento.php'">
+             <i class="material-icons">add_circle_outline</i>
+    </button>
+    <table class="highlight">
         <tr>
             <th>ID</th>
             <th>Descrição</th>

@@ -5,9 +5,7 @@ include_once 'C:\xampp\htdocs\lpbccphp2024\MODEL\Equipamento.php';
 
 class Equipamento
 {
-    public function Select()
-    {
-
+    public function Select(){
         $sql = "Select * from equipamento;";
         $con = Conexao::conectar();
         $registros = $con->query($sql);
@@ -24,6 +22,16 @@ class Equipamento
         }
         return $lstEqpto;
 
+    }
+    public function Insert(\MODEL\Equipamento $equipamento){
+        $sql = "INSERT INTO equipamento (descricao, responsavel, departamento, compra) VALUES ('{$equipamento->getDescricao()}', '{$equipamento->getResponsavel()}', '{$equipamento->getDepartamento()}', '{$equipamento->getCompra()}');";
+
+        $con = Conexao::conectar();
+        $result = $con->query($sql);
+        $con = Conexao::desconectar();
+        
+        return $result;
+        
     }
 
 
